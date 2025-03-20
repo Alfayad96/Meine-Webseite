@@ -1,13 +1,9 @@
-const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
 // Lade die Umgebungsvariablen aus der .env Datei
 dotenv.config();
 
-const app = require('./app');
-
-const PORT = process.env.PORT || 5002;
 const MONGO_URI = process.env.MONGO_URI;
 
 if (!MONGO_URI) {
@@ -21,9 +17,7 @@ mongoose.connect(MONGO_URI, {
   useUnifiedTopology: true,
 }).then(() => {
   console.log('Connected to MongoDB');
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
+  mongoose.connection.close();
 }).catch(err => {
   console.error('Database connection error:', err);
 });
