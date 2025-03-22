@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitarbeiterprofile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        form {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        form button:hover {
+            background-color: #555;
+        }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 20px 0;
+            animation: slideIn 1s ease-in-out;
+        }
+        .carousel-item {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            margin-right: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .carousel-item:hover {
+            transform: scale(1.05);
+        }
+        .carousel-item img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .carousel-item h2 {
+            margin: 10px 0 5px;
+        }
+        .carousel-item p {
+            margin: 0;
+            color: #666;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mitarbeiterprofile</h1>
+    </header>
+    <div class="container">
+        <form id="employeeForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="jobTitle" placeholder="Berufsbezeichnung" required>
+            <textarea id="bio" placeholder="Bio" required></textarea>
+            <input type="file" id="photo" accept="image/*" required>
+            <button type="submit">Mitarbeiter hinzufügen</button>
+        </form>
+        <div class="carousel" id="employeeCarousel"></div>
+    </div>
+
+    <script>
+        async function fetchEmployees() {
+            try {
+                const response = await fetch('http://localhost:5002/api/employees');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const employees = await response.json();
+                const carousel = document.getElementById('employeeCarousel');
+
+                carousel.innerHTML = ''; // Clear existing content
+
+                employees.forEach(employee => {
+                    const item = document.createElement('div');
+                    item.className = 'carousel-item';
+                    item.innerHTML = `
+                        <img src="${employee.photoUrl}" alt="${employee.name}">
+                        <h2>${employee.name}</h2>
+                        <h3>${employee.jobTitle}</h3>
+                        <p>${employee.bio}</p>
+                    `;
+                    carousel.appendChild(item);
+                });
+            } catch (error) {
+                console.error('Fetch error:', error);
+            }
+        }
+
+        async function addEmployee(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const jobTitle = document.getElementById('jobTitle').value;
+            const bio = document.getElementById('bio').value;
+            const photo = document.getElementById('photo').files[0];
+
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('jobTitle', jobTitle);
+            formData.append('bio', bio);
+            formData.append('photo', photo);
+
+            try {
+                const response = await fetch('http://localhost:5002/api/employees', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjdkYzMyNjM1NGZhZTM1M2U4ODY4ODk2In0sImlhdCI6MTc0MjUwODcwNiwiZXhwIjoxNzQyNTEyMzA2fQ.PYFJ4jOy9_Iiht9ZYaYff_Fo8AaySh92mNkRHyXdZsM'
+                    },
+                    body: formData
+                });
+
+                if (response.ok) {
+                    fetchEmployees();
+                } else {
+                    alert('Fehler beim Hinzufügen des Mitarbeiters');
+                }
+            } catch (error) {
+                console.error('Fetch error:', error);
+                alert('Fehler beim Hinzufügen des Mitarbeiters');
+            }
+        }
+
+        document.getElementById('employeeForm').addEventListener('submit', addEmployee);
+
+        fetchEmployees();
+    </script>
+</body>
+</html>
