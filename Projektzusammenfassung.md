@@ -1,5 +1,9 @@
 # Projektzusammenfassung
 
+## Projektziel
+
+Wir arbeiten an einer professionellen IT-Website für ein Unternehmen. Der Fokus liegt darauf, eine wirklich hochwertige, moderne und sichere Webseite zu erstellen, die potenzielle Kunden beeindruckt und davon überzeugt, dass hinter dieser Seite echte IT-Profis stehen. Achte darauf, dass die Seite sowohl technisch als auch optisch sehr ansprechend und funktional ist.
+
 ## Bisherige Schritte
 
 1. **Projektstruktur erstellt und grundlegende Dateien eingerichtet:**
@@ -30,6 +34,24 @@
    - Verbinden des lokalen Repositories mit GitHub.
    - Pushen der Änderungen zu GitHub.
 
+6. **Frontend-Entwicklung:**
+   - HTML-Datei (`index.html`) erstellt und das Formular zum Hinzufügen von Mitarbeitern sowie das Karussell zur Anzeige der Mitarbeiterprofile implementiert.
+   - JavaScript-Code hinzugefügt, um Mitarbeiterprofile von der API abzurufen und anzuzeigen.
+   - Möglichkeit zum Hochladen von Fotos implementiert.
+   - `App.js`, `index.js`, und `index.css` erstellt und konfiguriert.
+   - TailwindCSS und PostCSS konfiguriert.
+
+7. **Backend-Entwicklung:**
+   - `employeeController.js` erstellt und die Logik zum Hochladen von Fotos sowie zum Erstellen und Abrufen von Mitarbeiterprofilen implementiert.
+   - `employeeRoutes.js` erstellt und die Routen für das Erstellen und Abrufen von Mitarbeiterprofilen definiert.
+   - CORS in `app.js` konfiguriert, um Cross-Origin-Anfragen zuzulassen.
+
+8. **Fehlerbehebung:**
+   - CORS-Fehler behoben, der das Abrufen von Mitarbeiterprofilen verhinderte.
+   - Portkonflikte behoben, indem laufende Prozesse beendet wurden.
+   - Kodierungsprobleme in `server.js` behoben.
+   - Fehler `ERR_OSSL_EVP_UNSUPPORTED` durch Setzen der Umgebungsvariable `NODE_OPTIONS` behoben.
+
 ## Verwendete Technologien und Tools
 
 - **Programmiersprachen:**
@@ -40,79 +62,9 @@
   - **Mongoose**: ODM-Bibliothek zur Verbindung mit MongoDB.
   - **jsonwebtoken**: Bibliothek zur Erstellung und Überprüfung von JWT-Tokens.
   - **dotenv**: Bibliothek zur Verwaltung von Umgebungsvariablen.
-
-- **Datenbank:**
-  - **MongoDB**: NoSQL-Datenbank zur Speicherung von Benutzerdaten.
-
-- **Entwicklungswerkzeuge:**
-  - **Node.js**: JavaScript-Laufzeitumgebung zur Ausführung von Servercode.
-  - **Nodemon**: Werkzeug zur automatischen Neustart des Servers bei Codeänderungen.
-  - **Git**: Versionskontrollsystem zur Verwaltung von Codeänderungen.
-  - **GitHub**: Plattform zur Speicherung und Verwaltung von Git-Repositories.
-
-- **Apps und Webseiten:**
-  - **Postman**: Tool zur Erstellung und Ausführung von HTTP-Anfragen.
-  - **MongoDB Atlas**: Cloud-Dienst zur Verwaltung von MongoDB-Datenbanken.
-  - **MongoDB Compass**: GUI-Tool zur Verwaltung von MongoDB-Datenbanken.
-
-## Bisherige Fortschritte
-
-- **Benutzerregistrierung und Anmeldung**: 100%
-- **JWT-Authentifizierung und geschützte Routen**: 100%
-- **Projekt auf GitHub gespeichert**: 100%
-
-## Fortschritte vom heutigen Tag
-
-1. **Frontend-Entwicklung:**
-   - HTML-Datei (`index.html`) erstellt und das Formular zum Hinzufügen von Mitarbeitern sowie das Karussell zur Anzeige der Mitarbeiterprofile implementiert.
-   - JavaScript-Code hinzugefügt, um Mitarbeiterprofile von der API abzurufen und anzuzeigen.
-   - Möglichkeit zum Hochladen von Fotos implementiert.
-
-2. **Backend-Entwicklung:**
-   - `employeeController.js` erstellt und die Logik zum Hochladen von Fotos sowie zum Erstellen und Abrufen von Mitarbeiterprofilen implementiert.
-   - `employeeRoutes.js` erstellt und die Routen für das Erstellen und Abrufen von Mitarbeiterprofilen definiert.
-   - CORS in `app.js` konfiguriert, um Cross-Origin-Anfragen zuzulassen.
-
-3. **Fehlerbehebung:**
-   - CORS-Fehler behoben, der das Abrufen von Mitarbeiterprofilen verhinderte.
-   - Portkonflikte behoben, indem laufende Prozesse beendet wurden.
-
-## Noch zu erledigen
-
-1. **Weitere Frontend-Entwicklung:**
-   - Verbesserung des Designs und der Benutzerfreundlichkeit der Benutzeroberfläche.
-   - Implementierung von Validierungen für das Formular.
-
-2. **Weitere Funktionen:**
-   - Passwort-Reset-Funktionalität.
-   - Benutzerrollen und Berechtigungen.
-   - Weitere geschützte Routen und Funktionen.
-
-3. **Tests:**
-   - Schreiben von Unit-Tests und Integrationstests.
-   - Technologien: Jest, Mocha, Chai.
-
-4. **Deployment:**
-   - Bereitstellung der Anwendung auf einem Server oder Cloud-Dienst.
-   - Technologien: Heroku, AWS, Azure.
-
-## Fortschritt in Prozent
-
-- **Backend-Entwicklung (API, Authentifizierung, geschützte Routen):** 70%
-- **Frontend-Entwicklung:** 50%
-- **Tests:** 0%
-- **Deployment:** 0%
-
-## Zusammenfassung der verwendeten Technologien und Tools
-
-- **Programmiersprachen:**
-  - JavaScript
-
-- **Frameworks und Bibliotheken:**
-  - **Express.js**: Web-Framework für Node.js zur Erstellung von Servern und APIs.
-  - **Mongoose**: ODM-Bibliothek zur Verbindung mit MongoDB.
-  - **jsonwebtoken**: Bibliothek zur Erstellung und Überprüfung von JWT-Tokens.
-  - **dotenv**: Bibliothek zur Verwaltung von Umgebungsvariablen.
+  - **React**: JavaScript-Bibliothek zur Erstellung von Benutzeroberflächen.
+  - **TailwindCSS**: Utility-First CSS-Framework.
+  - **Framer Motion**: Bibliothek für Animationen in React.
 
 - **Datenbank:**
   - **MongoDB**: NoSQL-Datenbank zur Speicherung von Benutzerdaten.
@@ -143,7 +95,42 @@
 - **Benutzerregistrierung:**
   ```bash
   curl -X POST http://localhost:5002/api/auth/register -H "Content-Type: application/json" -d "{\"username\": \"newuser\", \"password\": \"newpassword\", \"email\": \"newuser@example.com\"}"
+````
 
-  Hirarchie des Programms
-website/ ├── controllers/ │ ├── authController.js │ ├── employeeController.js │ ├── userController.js ├── middleware/ │ └── authMiddleware.js ├── models/ │ ├── Employee.js │ └── User.js ├── routes/ │ ├── authRoutes.js │ ├── employeeRoutes.js │ ├── userRoutes.js ├── uploads/ ├── .env ├── app.js ├── index.html ├── Projektzusammenfassung.md ├── server.js ├── package.json
+## Noch zu erledigen
 
+Weitere Frontend-Entwicklung:
+
+- Verbesserung des Designs und der Benutzerfreundlichkeit der Benutzeroberfläche.
+- Implementierung von Validierungen für das Formular.
+
+Weitere Funktionen:
+
+- Passwort-Reset-Funktionalität.
+- Benutzerrollen und Berechtigungen.
+- Weitere geschützte Routen und Funktionen.
+
+Tests:
+
+- Schreiben von Unit-Tests und Integrationstests.
+- Technologien: Jest, Mocha, Chai.
+
+Deployment:
+
+- Bereitstellung der Anwendung auf einem Server oder Cloud-Dienst.
+- Technologien: Heroku, AWS, Azure.
+
+## Fortschritt in Prozent
+
+- Backend-Entwicklung (API, Authentifizierung, geschützte Routen): 70%
+- Frontend-Entwicklung: 50%
+- Tests: 0%
+- Deployment: 0%
+
+## Nächster Schritt
+
+Morgen werden wir mit dem Downgrade von Node.js beginnen:
+
+- Lade die gewünschte Version von Node.js herunter:
+  - Gehe zur Node.js Download-Seite.
+  - Suche nach der Version 16.x.x und lade den Windows Installer (MSI) herunter.

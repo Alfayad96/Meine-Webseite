@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Webseite</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Willkommen auf meiner Webseite</h1>
+        <form id="employee-form" class="mt-4">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="position">Position:</label>
+                <input type="text" class="form-control" id="position" name="position" required>
+            </div>
+            <div class="form-group">
+                <label for="photo">Foto:</label>
+                <input type="file" class="form-control-file" id="photo" name="photo" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Mitarbeiter hinzufügen</button>
+        </form>
+        <div id="employee-carousel" class="mt-5 d-flex flex-wrap">
+            <!-- Mitarbeiterprofile werden hier angezeigt -->
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
