@@ -3,7 +3,7 @@
 ## Projektziel
 
 Wir arbeiten an einer professionellen IT-Website für ein Unternehmen. Der Fokus liegt darauf, eine wirklich hochwertige, moderne und sichere Webseite zu erstellen, die potenzielle Kunden beeindruckt und davon überzeugt, dass hinter dieser Seite echte IT-Profis stehen. Achte darauf, dass die Seite sowohl technisch als auch optisch sehr ansprechend und funktional ist.
-
+    
 ## Bisherige Schritte
 
 1. **Projektstruktur erstellt und grundlegende Dateien eingerichtet:**
@@ -134,3 +134,62 @@ Morgen werden wir mit dem Downgrade von Node.js beginnen:
 - Lade die gewünschte Version von Node.js herunter:
   - Gehe zur Node.js Download-Seite.
   - Suche nach der Version 16.x.x und lade den Windows Installer (MSI) herunter.
+website/
+├── .vercel/                     # Vercel-Konfigurationsdateien
+│   ├── project.json
+│   └── README.txt
+├── assets/                      # Statische Dateien (CSS, Bilder, JS)
+│   ├── css/
+│   │   └── styles.css
+│   ├── images/
+│   │   └── employee1.jpg
+│   └── js/
+│       └── script.js
+├── backend/                     # Backend-Logik (Node.js/Express)
+│   ├── .env                     # Umgebungsvariablen
+│   ├── app.js                   # Haupt-App-Setup
+│   ├── package.json             # Backend-Abhängigkeiten
+│   ├── package-lock.json
+│   ├── server.js                # Haupt-Server-Datei
+│   ├── packageRoutes.js         # API-Routen
+│   ├── controllers/             # Controller-Logik
+│   │   ├── adminController.js
+│   │   ├── authController.js
+│   │   ├── bookingController.js
+│   │   ├── employeeController.js
+│   │   ├── packageController.js
+│   │   └── userController.js
+│   ├── middleware/              # Middleware-Funktionen
+│   │   └── authMiddleware.js
+│   ├── models/                  # Datenbankmodelle
+│   │   ├── Admin.js
+│   │   ├── Booking.js
+│   │   ├── Employee.js
+│   │   ├── Package.js
+│   │   └── User.js
+│   └── node_modules/            # Node.js-Abhängigkeiten
+├── frontend/                    # Frontend-Logik (React)
+│   ├── public/                  # Statische Dateien für das Frontend
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── src/                     # React-Quellcode
+│   │   ├── components/          # React-Komponenten
+│   │   │   └── Services.js
+│   │   ├── App.js               # Haupt-App-Komponente
+│   │   ├── index.js             # Einstiegspunkt für React
+│   │   └── styles/              # Frontend-spezifische CSS-Dateien
+│   │       └── app.css
+│   ├── package.json             # Frontend-Abhängigkeiten
+│   └── package-lock.json
+├── .babelrc                     # Babel-Konfiguration
+├── .gitignore                   # Git-Ausschlussdateien
+├── index.html                   # Haupt-HTML-Datei (falls benötigt)
+├── IP-Adresse-Mogodb.txt        # Notizen zur MongoDB-IP-Adresse
+├── package.json                 # Projektweite Abhängigkeiten
+├── package-lock.json
+├── postcss.config.js            # PostCSS-Konfiguration
+├── projektstruktur.txt          # Projektstruktur-Dokumentation
+├── Projektzusammenfassung.md    # Projektzusammenfassung
+├── server.js                    # (Optional) Einstiegspunkt für Backend
+├── tailwind.config.js           # Tailwind CSS-Konfiguration
+└── webpack.config.js            # Webpack-Konfiguration

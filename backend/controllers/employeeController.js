@@ -3,6 +3,8 @@ const Employee = require('../models/Employee');
 const multer = require('multer');
 const path = require('path');
 
+const employees = []; // Temporäre Datenbank
+
 // Set up multer for file uploads
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -16,16 +18,13 @@ const upload = multer({ storage });
 
 exports.upload = upload.single('photo');
 
-exports.createEmployee = async (req, res) => {
-    const { name, jobTitle, bio } = req.body;
-    const photoUrl = req.file ? `/uploads/${req.file.filename}` : '';
-
-    const employee = new Employee({ name, jobTitle, bio, photoUrl });
-    await employee.save();
-    res.status(201).send('Employee created');
+exports.getAllEmployees = (req, res) => {
+    res.status(200).json(employees);
 };
 
-exports.getEmployees = async (req, res) => {
-    const employees = await Employee.find();
-    res.json(employees);
+exports.createEmployee = (req, res) => {
+    const { name, position } = req.body;
+    const newEmployee = { id: employees.length + 1, name, position };
+    employees.push(newEmployee);
+    res.status(201).json(newEmployee);
 };
