@@ -21,6 +21,5 @@ mongoose
   .then(() => console.log('MongoDB verbunden'))
   .catch((err) => console.error('Fehler beim Verbinden mit MongoDB:', err));
 
-// Server starten
-const PORT = 5002;
-app.listen(PORT, () => console.log(`Server läuft auf http://localhost:${PORT}`));
+// Exportiere die App
+module.exports = app;
