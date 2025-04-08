@@ -83,5 +83,4 @@ Das Ziel dieses Projekts ist es, eine professionelle IT-Website zu entwickeln, d
   - Postman – Tool zur Erstellung und Ausführung von HTTP-Anfragen.
   - MongoDB Atlas und MongoDB Compass – Verwaltung und GUI-Tools für MongoDB.
 
-## Installation und Konfiguration
 
