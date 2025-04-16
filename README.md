@@ -1,6 +1,6 @@
 # Meine-Webseite (in Arbeit)
 
-Dies ist ein professionelles IT-Website-Projekt, das entwickelt wurde, um eine hochwertige, moderne und sichere Webpräsenz zu bieten. Ziel ist es, potenziellen Kunden ein beeindruckendes, funktionales und optisch ansprechendes Erlebnis zu präsentieren – unterstützt durch das Fachwissen eines echten IT-Profis-Teams.
+Dies ist ein professionelles IT-Website-Projekt, das entwickelt wurde, um eine hochwertige, moderne und sichere Webpräsenz zu bieten. Ziel ist es, potenziellen Kunden ein beeindruckendes, funktionales und optisch ansprechendes Erlebnis zu präsentieren..
 
 ## Inhaltsverzeichnis
 
