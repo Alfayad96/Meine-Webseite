@@ -1,109 +1,99 @@
-# Meine-Webseite (in Arbeit) 🚧
+# Meine-Webseite (in Arbeit)
 
-Dies ist ein **Übungsprojekt zur Webentwicklung**, das gestartet wurde **ohne Vorkenntnisse**. Ziel ist es, die Grundlagen und fortgeschrittenen Konzepte der modernen Webentwicklung zu erlernen – sowohl im Backend als auch im Frontend – und dabei eine professionelle und funktionale IT-Webseite zu erstellen.
-
----
-
-## 📌 Projektziel
-
-Das Ziel dieses Projekts ist es, durch praktische Anwendung das Entwickeln moderner Webanwendungen zu lernen. Die Webseite soll:
-
-- als Lernplattform dienen,
-- moderne Web-Technologien beinhalten,
-- sicher und funktionsfähig sein,
-- und potenziellen Kunden oder Arbeitgebern als Referenzprojekt dienen.
+Dies ist ein **Übungsprojekt im Bereich Webentwicklung**, das entwickelt wurde, um eine hochwertige, moderne und sichere Webpräsenz zu erstellen.  
+Das Ziel ist es, potenziellen Kunden ein beeindruckendes, funktionales und optisch ansprechendes Erlebnis zu präsentieren – und gleichzeitig Webentwicklung von Grund auf zu erlernen.  
+**Das Projekt wurde ohne Vorkenntnisse gestartet und dient primär dem Lernzweck.**
 
 ---
 
-## ✅ Bisherige Schritte
+## Inhaltsverzeichnis
 
-### 🔧 Projektstruktur & Konfiguration
-- Erstellung von `server.js`, `app.js`, `.env` und weiteren Konfigurationsdateien
-- Einrichtung von Routen und Controllern: `authRoutes.js`, `userRoutes.js`, `authController.js`, `userController.js`
-- Implementierung von Middleware (`authMiddleware.js`) zum Schutz von Routen
-
-### 🔐 Authentifizierung
-- `POST /api/auth/register` – Registrierung neuer Benutzer
-- `POST /api/auth/login` – Login & JWT-Erzeugung
-- `GET /api/user/profile` – geschützter Endpunkt mit JWT-Prüfung
-
-### 🛠 Fehlerbehebung
-- Portkonflikte durch blockierende Prozesse
-- SSL-Fehler (ERR_OSSL_EVP_UNSUPPORTED) durch Node-Umgebungsvariablen gelöst
-- Firewall-Konfiguration angepasst
-
-### 🗃 Versionskontrolle
-- Initialisierung eines Git-Repositories
-- GitHub-Repository verknüpft & regelmäßige Commits
-
-### 🎨 Frontend
-- HTML-Formular zur Mitarbeitererfassung (`index.html`)
-- Karussell zur Anzeige von Mitarbeiterprofilen
-- JavaScript zur Anbindung an die API
-- Integration von Foto-Upload
-- TailwindCSS & PostCSS für modernes Design
-- Framer Motion für Animationen (React)
-
-### 🔙 Backend
-- `employeeController.js` zur Verwaltung von Mitarbeiterdaten
-- `employeeRoutes.js` mit passenden Endpunkten
-- CORS-Konfiguration für Cross-Origin-Requests
+- Projektziel  
+- Bisherige Schritte  
+- Verwendete Technologien und Tools  
+- Installation und Konfiguration  
+- API-Endpunkte und Beispiele  
+- Noch zu erledigen  
+- Zugangsdaten und Sicherheitsaspekte  
+- Nächster Schritt  
 
 ---
 
-## 🧰 Verwendete Technologien und Tools
+## Projektziel
 
-### 🌐 Programmiersprache
+Das Ziel dieses Projekts ist es, eine professionelle IT-Website zu entwickeln, die potenzielle Kunden überzeugt und die Expertise des Entwicklerteams unterstreicht.  
+Die Webseite soll technisch, optisch und funktional auf höchstem Niveau sein – **und gleichzeitig dazu dienen, Webentwicklung praktisch zu erlernen**.
+
+---
+
+## Bisherige Schritte
+
+### Projektstruktur und grundlegende Dateien
+- Einrichtung von `server.js`, `.env`, `app.js` und weiteren Konfigurationsdateien.
+- Erstellung der Controller (z. B. `authController.js`, `userController.js`) und Routen (z. B. `authRoutes.js`, `userRoutes.js`).
+- Implementierung von Middleware (z. B. `authMiddleware.js`) zur Absicherung der API.
+
+### Benutzerregistrierung und -anmeldung
+- Implementierung der Endpunkte:
+  - `POST /api/auth/register` zur Registrierung eines neuen Benutzers.
+  - `POST /api/auth/login` zur Anmeldung eines Benutzers und Erhalt eines JWT-Tokens.
+
+### Implementierung geschützter Routen
+- Entwicklung von Middleware zur Überprüfung von JWT-Tokens.
+- Beispiel: `GET /api/user/profile` als geschützter Endpunkt zur Abfrage des Benutzerprofils.
+
+### Fehlerbehebung
+- Lösung von Portkonflikten durch das Beenden von Prozessen, die Ports blockieren.
+- Anpassung von Firewall-Einstellungen.
+- Behebung von SSL-bezogenen Fehlern (`ERR_OSSL_EVP_UNSUPPORTED`) durch Setzen entsprechender Umgebungsvariablen.
+
+### Versionsverwaltung und GitHub-Integration
+- Initialisierung eines Git-Repositories.
+- Committen der Dateien und Verbinden mit GitHub.
+- Pushen der Änderungen zum GitHub-Repository.
+
+### Frontend-Entwicklung
+- Erstellung einer HTML-Datei (`index.html`) mit einem Formular zur Mitarbeitererfassung sowie einem Karussell zur Anzeige von Mitarbeiterprofilen.
+- Integration von JavaScript zur dynamischen Anzeige von Mitarbeiterprofilen über die API.
+- Implementierung des Foto-Uploads.
+- Konfiguration von TailwindCSS und PostCSS für ein modernes Design.
+
+### Backend-Entwicklung
+- Erstellung eines `employeeController.js` zur Verwaltung von Mitarbeiterprofilen und Foto-Uploads.
+- Definition entsprechender Routen in `employeeRoutes.js` und Konfiguration von CORS für Cross-Origin-Anfragen.
+
+### Weitere Fehlerbehebungen
+- Lösung von CORS-Fehlern und Portkonflikten.
+- Behebung von Kodierungsproblemen in `server.js`.
+
+---
+
+## Verwendete Technologien und Tools
+
+### Programmiersprache:
 - JavaScript
 
-### ⚙️ Frameworks & Libraries
-- **Express.js** – Webserver & Routing
-- **Mongoose** – ODM für MongoDB
-- **jsonwebtoken** – Authentifizierung via JWT
-- **dotenv** – Umgebungsvariablen
-- **React** – Frontend-Entwicklung
-- **TailwindCSS** – Styling
-- **Framer Motion** – Animationen
+### Frameworks und Bibliotheken:
+- Express.js – Web-Framework für die Erstellung von Servern und APIs.
+- Mongoose – ODM zur Verbindung mit MongoDB.
+- jsonwebtoken – Erstellung und Überprüfung von JWT-Tokens.
+- dotenv – Verwaltung von Umgebungsvariablen.
+- React – Erstellung von Benutzeroberflächen.
+- TailwindCSS – Utility-First CSS-Framework.
+- Framer Motion – Animationen in React.
 
-### 🗄️ Datenbank
-- MongoDB (lokal & über MongoDB Atlas)
+### Datenbank:
+- MongoDB – NoSQL-Datenbank für die Speicherung von Benutzerdaten.
 
-### 🔧 Entwicklungsumgebung
-- Node.js
-- Nodemon (automatischer Serverneustart)
-- Git & GitHub
+### Entwicklungswerkzeuge:
+- Node.js – JavaScript-Laufzeitumgebung.
+- Nodemon – Automatischer Neustart des Servers bei Codeänderungen.
+- Git und GitHub – Versionskontrollsystem und Repository-Management.
 
-### 🧪 Testing & Tools
-- Postman (zum Testen von API-Endpunkten)
-- MongoDB Compass (grafische Oberfläche für MongoDB)
-
----
-
-## 📋 Noch zu erledigen (To-Do)
-
-- [ ] Validierung der Formulardaten (Frontend & Backend)
-- [ ] Authentifizierte Admin-Oberfläche zur Mitarbeiterverwaltung
-- [ ] Deployment (z. B. mit Vercel oder Render)
-- [ ] Mobile Optimierung (Responsive Design)
-- [ ] Erweiterung des Frontends mit React-Komponenten
+### Weitere Tools:
+- Postman – Tool zur Erstellung und Ausführung von HTTP-Anfragen.
+- MongoDB Atlas und MongoDB Compass – Verwaltung und GUI-Tools für MongoDB.
 
 ---
 
-## 🔐 Zugang & Sicherheit
-
-> Hinweis: Zugangsdaten, Tokens und sensible Informationen sind in `.env`-Dateien ausgelagert und **nicht im Repository enthalten**.  
-> Sicherheitsaspekte wie JWT-Verifizierung und CORS-Konfiguration wurden berücksichtigt.
-
----
-
-## 🚀 Nächster Schritt
-
-Die nächsten Schritte umfassen die Verbesserung des Frontends mit React, die vollständige Umsetzung der Admin-Ansicht, sowie die Vorbereitung auf ein mögliches Deployment.
-
----
-
-**Hinweis:** Dieses Projekt dient ausschließlich **Lernzwecken** und ist nicht für die produktive Nutzung gedacht.  
-Es wurde von Grund auf selbst erarbeitet – ganz ohne Vorkenntnisse.
-
----
-
+> **Hinweis:** Dieses Projekt ist Teil eines Selbstlernprozesses und richtet sich an Einsteiger in die Webentwicklung.
