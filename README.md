@@ -1,113 +1,109 @@
-Meine-Webseite (in Arbeit)
-Dies ist ein Übungsprojekt im Bereich Webentwicklung, das entwickelt wurde, um praktische Erfahrungen in der Erstellung moderner, sicherer und funktionaler Webseiten zu sammeln. Das Projekt richtet sich an Einsteiger und wurde ohne Vorkenntnisse gestartet, mit dem Ziel, durch „Learning by Doing“ Schritt für Schritt die Grundlagen und weiterführende Konzepte der Webentwicklung zu erlernen.
+# Meine-Webseite (in Arbeit) 🚧
 
-Inhaltsverzeichnis
-Projektziel
+Dies ist ein **Übungsprojekt zur Webentwicklung**, das gestartet wurde **ohne Vorkenntnisse**. Ziel ist es, die Grundlagen und fortgeschrittenen Konzepte der modernen Webentwicklung zu erlernen – sowohl im Backend als auch im Frontend – und dabei eine professionelle und funktionale IT-Webseite zu erstellen.
 
-Bisherige Schritte
+---
 
-Verwendete Technologien und Tools
+## 📌 Projektziel
 
-Installation und Konfiguration
+Das Ziel dieses Projekts ist es, durch praktische Anwendung das Entwickeln moderner Webanwendungen zu lernen. Die Webseite soll:
 
-API-Endpunkte und Beispiele
+- als Lernplattform dienen,
+- moderne Web-Technologien beinhalten,
+- sicher und funktionsfähig sein,
+- und potenziellen Kunden oder Arbeitgebern als Referenzprojekt dienen.
 
-Noch zu erledigen
+---
 
-Zugangsdaten und Sicherheitsaspekte
+## ✅ Bisherige Schritte
 
-Nächster Schritt
+### 🔧 Projektstruktur & Konfiguration
+- Erstellung von `server.js`, `app.js`, `.env` und weiteren Konfigurationsdateien
+- Einrichtung von Routen und Controllern: `authRoutes.js`, `userRoutes.js`, `authController.js`, `userController.js`
+- Implementierung von Middleware (`authMiddleware.js`) zum Schutz von Routen
 
-Projektziel
-Das Ziel dieses Projekts ist es, Webentwicklung von Grund auf zu erlernen – von der Backend-Logik über die API-Entwicklung bis hin zum modernen Frontend. Gleichzeitig soll eine beispielhafte IT-Webseite entstehen, die potenziell als Vorlage oder Referenz für spätere echte Projekte dienen kann. Sie soll technisch, optisch und funktional möglichst professionell wirken und das Gelernte praktisch umsetzen.
+### 🔐 Authentifizierung
+- `POST /api/auth/register` – Registrierung neuer Benutzer
+- `POST /api/auth/login` – Login & JWT-Erzeugung
+- `GET /api/user/profile` – geschützter Endpunkt mit JWT-Prüfung
 
-Bisherige Schritte
-Projektstruktur und grundlegende Dateien
-Einrichtung von server.js, .env, app.js und weiteren Konfigurationsdateien.
+### 🛠 Fehlerbehebung
+- Portkonflikte durch blockierende Prozesse
+- SSL-Fehler (ERR_OSSL_EVP_UNSUPPORTED) durch Node-Umgebungsvariablen gelöst
+- Firewall-Konfiguration angepasst
 
-Erstellung der Controller (z. B. authController.js, userController.js) und Routen (authRoutes.js, userRoutes.js).
+### 🗃 Versionskontrolle
+- Initialisierung eines Git-Repositories
+- GitHub-Repository verknüpft & regelmäßige Commits
 
-Implementierung von Middleware (z. B. authMiddleware.js) zur Absicherung der API.
+### 🎨 Frontend
+- HTML-Formular zur Mitarbeitererfassung (`index.html`)
+- Karussell zur Anzeige von Mitarbeiterprofilen
+- JavaScript zur Anbindung an die API
+- Integration von Foto-Upload
+- TailwindCSS & PostCSS für modernes Design
+- Framer Motion für Animationen (React)
 
-Benutzerregistrierung und -anmeldung
-Implementierung der Endpunkte:
-POST /api/auth/register zur Registrierung eines neuen Benutzers.
-POST /api/auth/login zur Anmeldung eines Benutzers und Erhalt eines JWT-Tokens.
+### 🔙 Backend
+- `employeeController.js` zur Verwaltung von Mitarbeiterdaten
+- `employeeRoutes.js` mit passenden Endpunkten
+- CORS-Konfiguration für Cross-Origin-Requests
 
-Implementierung geschützter Routen
-Middleware zur Überprüfung von JWT-Tokens.
+---
 
-Beispiel: GET /api/user/profile als geschützter Endpunkt zur Abfrage des Benutzerprofils.
+## 🧰 Verwendete Technologien und Tools
 
-Fehlerbehebung
-Lösung von Portkonflikten durch das Beenden blockierender Prozesse.
+### 🌐 Programmiersprache
+- JavaScript
 
-Anpassung von Firewall-Einstellungen.
+### ⚙️ Frameworks & Libraries
+- **Express.js** – Webserver & Routing
+- **Mongoose** – ODM für MongoDB
+- **jsonwebtoken** – Authentifizierung via JWT
+- **dotenv** – Umgebungsvariablen
+- **React** – Frontend-Entwicklung
+- **TailwindCSS** – Styling
+- **Framer Motion** – Animationen
 
-Behebung von SSL-bezogenen Fehlern (z. B. ERR_OSSL_EVP_UNSUPPORTED) durch entsprechende Umgebungsvariablen.
+### 🗄️ Datenbank
+- MongoDB (lokal & über MongoDB Atlas)
 
-Versionsverwaltung und GitHub-Integration
-Initialisierung eines Git-Repositories.
+### 🔧 Entwicklungsumgebung
+- Node.js
+- Nodemon (automatischer Serverneustart)
+- Git & GitHub
 
-Committen der Dateien und Push zum GitHub-Repository.
+### 🧪 Testing & Tools
+- Postman (zum Testen von API-Endpunkten)
+- MongoDB Compass (grafische Oberfläche für MongoDB)
 
-Frontend-Entwicklung
-Erstellung einer index.html mit Formular zur Mitarbeitererfassung und Karussell zur Anzeige der Profile.
+---
 
-Integration von JavaScript für dynamische Anzeige über die API.
+## 📋 Noch zu erledigen (To-Do)
 
-Implementierung eines Foto-Uploads.
+- [ ] Validierung der Formulardaten (Frontend & Backend)
+- [ ] Authentifizierte Admin-Oberfläche zur Mitarbeiterverwaltung
+- [ ] Deployment (z. B. mit Vercel oder Render)
+- [ ] Mobile Optimierung (Responsive Design)
+- [ ] Erweiterung des Frontends mit React-Komponenten
 
-Konfiguration von TailwindCSS und PostCSS für ein modernes Design.
+---
 
-Backend-Entwicklung
-Erstellung eines employeeController.js zur Verwaltung von Mitarbeiterdaten und Fotos.
+## 🔐 Zugang & Sicherheit
 
-Definition entsprechender Routen in employeeRoutes.js.
+> Hinweis: Zugangsdaten, Tokens und sensible Informationen sind in `.env`-Dateien ausgelagert und **nicht im Repository enthalten**.  
+> Sicherheitsaspekte wie JWT-Verifizierung und CORS-Konfiguration wurden berücksichtigt.
 
-CORS-Konfiguration für Cross-Origin-Anfragen.
+---
 
-Weitere Fehlerbehebungen
-CORS-Probleme und Portkonflikte gelöst.
+## 🚀 Nächster Schritt
 
-Kodierungsprobleme in server.js behoben.
+Die nächsten Schritte umfassen die Verbesserung des Frontends mit React, die vollständige Umsetzung der Admin-Ansicht, sowie die Vorbereitung auf ein mögliches Deployment.
 
-Verwendete Technologien und Tools
-Programmiersprache:
+---
 
-JavaScript
+**Hinweis:** Dieses Projekt dient ausschließlich **Lernzwecken** und ist nicht für die produktive Nutzung gedacht.  
+Es wurde von Grund auf selbst erarbeitet – ganz ohne Vorkenntnisse.
 
-Frameworks und Bibliotheken:
-
-Express.js – Web-Framework für APIs
-
-Mongoose – ODM für MongoDB
-
-jsonwebtoken – JWT-Verwaltung
-
-dotenv – Umgebungsvariablen
-
-React – Frontend-Framework
-
-TailwindCSS – CSS-Framework
-
-Framer Motion – Animationen
-
-Datenbank:
-
-MongoDB (lokal & über MongoDB Atlas)
-
-Entwicklungswerkzeuge:
-
-Node.js – Laufzeitumgebung
-
-Nodemon – automatischer Serverneustart
-
-Git & GitHub – Versionskontrolle
-
-Weitere Tools:
-
-Postman – HTTP-Anfragen testen
-
-MongoDB Compass – GUI für MongoDB
+---
 
