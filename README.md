@@ -25,7 +25,11 @@ Das Ziel dieses Projekts ist es, eine professionelle IT-Website zu entwickeln, d
 Die Webseite soll technisch, optisch und funktional auf höchstem Niveau sein – **und gleichzeitig dazu dienen, Webentwicklung praktisch zu erlernen**.
 
 ---
+## 🔐 Zugang & Sicherheit
 
+> **Hinweis:** Zugangsdaten, Tokens und sensible Informationen sind in `.env`-Dateien ausgelagert und **nicht im Repository enthalten**.  
+> Sicherheitsaspekte wie **JWT-Verifizierung** und **CORS-Konfiguration** wurden berücksichtigt.
+---
 ## Bisherige Schritte
 
 ### Projektstruktur und grundlegende Dateien
